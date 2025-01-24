@@ -12,7 +12,7 @@ $(function() {
         // Send the form data to the server
         $.ajax({
             type: "POST",
-            url: "http://192.168.1.68:3000/contact", // Update this URL to match your server endpoint
+            url: "http://localhost:3000/contact", // Update this URL to match your server endpoint
             data: JSON.stringify(formData),
             contentType: "application/json",
             success: function(response) {

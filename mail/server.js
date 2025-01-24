@@ -16,7 +16,6 @@ app.use(urlencoded({ extended: true }));
 app.use(json());
 
 const apiKey = process.env.API_KEY;
-console.log('API Key:', apiKey); 
 
 const mailerSend = new MailerSend({
   apiKey: apiKey, 
@@ -55,7 +54,7 @@ app.post('/contact', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`Server is running on port : Good one, read the documentations`);
 });
 
 function validateEmail(email) {
