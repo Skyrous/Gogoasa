@@ -17,7 +17,8 @@ $(function() {
             contentType: "application/json",
             success: function(response) {
                 // Handle success
-                $("#response").html("<div class='alert alert-success'>Message sent successfully!</div>");
+                $("#response").html("<div class='alert alert-success' style='margin-top: 20px;'>Message sent successfully!</div>");
+                $("form")[0].reset();
             },
             error: function(xhr) {
                 // Handle error
