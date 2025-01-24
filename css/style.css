@@ -144,6 +144,12 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	margin: 0 auto;
 	margin-bottom: 40px;
 }
+a {
+    text-decoration: none; /* Removes the underline from links */
+  }
+  a:focus, a:active {
+    outline: none; /* Removes the focus outline on click */
+  }
 .btn-custom {
 	text-transform: uppercase;
 	color: #777;
@@ -199,6 +205,7 @@ header .intro-text {
 	padding-top: 200px;
 	padding-bottom: 50px;
 	text-align: center;
+	pointer-events: none;
 }
 /* Features Section */
 #features {
@@ -325,6 +332,13 @@ header .intro-text {
 	margin-bottom: 30px;
 }
 #gallery .gallery-item {
+	margin: 0 -15px;
+}
+#gallery2 {
+	padding: 0;
+	margin-bottom: 30px;
+}
+#gallery2 .gallery2-item {
 	margin: 0 -15px;
 }
 /* Team Section */

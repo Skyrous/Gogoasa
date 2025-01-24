@@ -1,10 +1,9 @@
 import express from 'express';
 import pkg from 'body-parser';
-import cors from 'cors'; // Import the cors middleware
+import cors from 'cors'; 
 import { config } from 'dotenv';
 import { MailerSend, EmailParams, Sender, Recipient } from 'mailersend';
 
-// Load environment variables from api.env
 config({ path: './api.env' });
 
 const { urlencoded, json } = pkg;
@@ -12,15 +11,15 @@ const { urlencoded, json } = pkg;
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors()); // Enable CORS for all routes
+app.use(cors()); 
 app.use(urlencoded({ extended: true }));
 app.use(json());
 
 const apiKey = process.env.API_KEY;
-console.log('API Key:', apiKey); // Log the API key to verify it is loaded
+console.log('API Key:', apiKey); 
 
 const mailerSend = new MailerSend({
-  apiKey: apiKey, // Ensure your API key is set in the api.env file
+  apiKey: apiKey, 
 });
 
 app.post('/contact', async (req, res) => {
@@ -33,7 +32,7 @@ app.post('/contact', async (req, res) => {
     const email_subject = `Dora Catering Contact: ${name}`;
     const email_body = `Ai primit un nou mesaj de contact.\n\nAici sunt detaliile:\n\nNume: ${name}\n\nEmail: ${email}\n\nMesaj:\n${message}`;
 
-    const sentFrom = new Sender('noreply@trial-ynrw7gy7x8jg2k8e.mlsender.net', 'Dora Catering Test'); // Use the trial domain
+    const sentFrom = new Sender('noreply@trial-ynrw7gy7x8jg2k8e.mlsender.net', 'Dora Catering Test');
     const recipients = [
         new Recipient('c_nicoleta00@yahoo.it', 'Admin')
     ];
