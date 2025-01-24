@@ -1,0 +1,18 @@
+#dishes {
+  margin-bottom: 30px; /* Adjust the value as needed */
+}
+
+#dishes .features-item {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#dishes img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  #dishes .features-item {
+    margin-bottom: 20px;
+}

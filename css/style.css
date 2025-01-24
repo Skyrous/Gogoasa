@@ -168,7 +168,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	display: table;
 	width: 100%;
 	padding: 0;
-	background: url(../img/intro-bg.jpg) center center no-repeat;
+	background: url(../img/intro-bg.jpeg) center center no-repeat;
 	background-color: #e5e5e5;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -224,6 +224,33 @@ header .intro-text {
 	line-height: 24px;
 	margin: 15px 0 30px;
 }
+.features-item img {
+  width: 300px; /* Set a fixed width */
+  height: 400px; /* Set a fixed height */
+  object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
+}
+#dishes {
+  padding: 60px 0; /* Add padding to the dishes section */
+  margin-bottom: 30px;
+}
+
+#about {
+  padding: 60px 0; /* Add padding to the about section */
+}
+
+#dishes .features-item {
+  margin-bottom: 30px; /* Add margin to the bottom of each features-item */
+}
+
+#dishes .features-item img {
+  width: 300px; /* Set a fixed width */
+  height: 400px; /* Set a fixed height */
+  max-width: 100%;
+
+  object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
+}
+
+
 /* About Section */
 #about {
 	padding: 0;
@@ -238,15 +265,15 @@ header .intro-text {
 	padding: 80px 0;
 }
 #about .about-img {
-	background: #444 url(../img/gallery-bg.jpg) center center no-repeat;
+	background: #444 url(../img/gallery-bg.jpeg) center center no-repeat;
 	background-size: cover;
-	height: 570px;
+	height: 480px;
 }
 #about p {
 	line-height: 24px;
 	margin: 15px 0 30px;
 }
-/* Menu Section */
+/* Our Offers */
 #restaurant-menu {
 	padding: 100px 0 60px 0;
 }
@@ -295,6 +322,7 @@ header .intro-text {
 /* Gallery Section */
 #gallery {
 	padding: 0;
+	margin-bottom: 30px;
 }
 #gallery .gallery-item {
 	margin: 0 -15px;
