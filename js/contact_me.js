@@ -1,6 +1,10 @@
 $(function() {
     $("form").on("submit", function(event) {
         event.preventDefault(); // Prevent the default form submission
+
+        // Disable the submit button to prevent multiple submissions
+        $("form button[type='submit']").prop('disabled', true);
+
         // Get form data
         var formData = {
             name: $("#name").val(),
