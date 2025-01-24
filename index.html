@@ -268,28 +268,5 @@
 <script type="text/javascript" src="js/main.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script>
-  $(function() {
-    $("form#contactForm").on("submit", function(event) {
-      event.preventDefault();
-      var formData = {
-        name: $("#name").val(),
-        email: $("#email").val(),
-        message: $("#message").val()
-      };
-      $.ajax({
-        type: "POST",
-        url: "http://localhost:3000/contact",
-        data: formData,
-        success: function(response) {
-          $("#response").html("<div class='alert alert-success'>Message sent successfully!</div>");
-        },
-        error: function() {
-          $("#response").html("<div class='alert alert-danger'>There was an error sending the message.</div>");
-        }
-      });
-    });
-  });
-</script>
 </body>
 </html>

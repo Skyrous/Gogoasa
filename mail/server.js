@@ -1,6 +1,6 @@
 import express from 'express';
 import pkg from 'body-parser';
-import cors from 'cors'; 
+import cors from 'cors'; // Import the cors middleware
 import { config } from 'dotenv';
 import { MailerSend, EmailParams, Sender, Recipient } from 'mailersend';
 
@@ -11,17 +11,19 @@ const { urlencoded, json } = pkg;
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors()); 
+app.use(cors());
 app.use(urlencoded({ extended: true }));
 app.use(json());
 
 const apiKey = process.env.API_KEY;
 
 const mailerSend = new MailerSend({
-  apiKey: apiKey, 
+  apiKey: apiKey,
 });
 
 app.post('/contact', async (req, res) => {
+    console.log("Received contact form submission:", req.body);
+
     const { name, email, message } = req.body;
 
     if (!name || !email || !message || !validateEmail(email)) {
@@ -33,7 +35,7 @@ app.post('/contact', async (req, res) => {
 
     const sentFrom = new Sender('noreply@trial-ynrw7gy7x8jg2k8e.mlsender.net', 'Dora Catering Test');
     const recipients = [
-        new Recipient('c_nicoleta00@yahoo.it', 'Admin')
+        new Recipient('balan.claudiu96@gmail.com', 'Admin')
     ];
 
     const emailParams = new EmailParams()
@@ -46,6 +48,7 @@ app.post('/contact', async (req, res) => {
 
     try {
         await mailerSend.email.send(emailParams);
+        console.log("Email sent successfully");
         res.status(200).json({ message: 'Message sent successfully!' });
     } catch (error) {
         console.error('Error sending email:', error);
@@ -54,7 +57,7 @@ app.post('/contact', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is running on port : Good one, read the documentations`);
+    console.log(`Server is running on port ${PORT}`);
 });
 
 function validateEmail(email) {
