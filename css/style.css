@@ -357,6 +357,29 @@ header .intro-text {
 	display: inline-block;
 	position: relative;
 }
+.team-img img {
+  max-width: 100%;
+  height: auto;
+}
+.chef-description {
+  font-size: 14px; /* Adjust the font size as needed */
+  text-align: left; /* Align text to the left */
+  margin-bottom: 10px; /* Reduce space between paragraphs */
+  line-height: 1.5; /* Adjust line height for better readability */
+}
+.chef-experience {
+  font-size: 14px; /* Adjust the font size as needed */
+  text-align: left; /* Align text to the left */
+  margin-bottom: 10px; /* Reduce space between lists */
+  line-height: 1.5; /* Adjust line height for better readability */
+}
+#team .section-title {
+  margin-bottom: 20px; /* Reduce space below the section title */
+}
+#team .col-md-6 {
+  padding: 0 15px; /* Adjust padding for better spacing */
+}
+
 /* Contact Section */
 #contact {
 	padding: 100px 0;
@@ -478,4 +501,3 @@ color: #999;
 #footer a:hover {
 	color: #eee;
 }
-

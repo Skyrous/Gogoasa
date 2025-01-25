@@ -35,7 +35,7 @@ app.post('/contact', async (req, res) => {
 
     const sentFrom = new Sender('noreply@trial-ynrw7gy7x8jg2k8e.mlsender.net', 'Dora Catering Test');
     const recipients = [
-        new Recipient('balan.claudiu96@gmail.com', 'Admin')
+        new Recipient('c_nicoleta00@yahoo.it', 'Admin')
     ];
 
     const emailParams = new EmailParams()
