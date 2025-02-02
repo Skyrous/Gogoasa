@@ -26,7 +26,8 @@ body, html {
   background: rgba(0, 0, 0, 0.5); 
 }
 .carousel-item img {
-	height: 500px; /* Set the height to 500px */
+	height: 600px;
+	width: 600px; /* Set the height to 500px */
 	object-fit: cover; /* Ensure the image covers the container without being cut off */
   }
   
@@ -283,9 +284,9 @@ header .intro-text {
 	margin: 15px 0 30px;
 }
 .features-item img {
-  width: 300px; /* Set a fixed width */
-  height: 400px; /* Set a fixed height */
-  object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
+  width: 500px; 
+  height: 500px; 
+  object-fit: cover; 
 }
 #dishes {
   padding: 60px 0; /* Add padding to the dishes section */

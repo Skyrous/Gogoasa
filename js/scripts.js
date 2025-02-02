@@ -2,6 +2,7 @@ $(document).on('click', '[data-toggle="lightbox"]', function(event) {
     event.preventDefault();
     $(this).ekkoLightbox();
   });
+  
   document.addEventListener('DOMContentLoaded', function() {
     const imageFolder = 'img/specials/';
     const imageCount = 10; // Assume there are 10 images in the folder
@@ -22,9 +23,9 @@ $(document).on('click', '[data-toggle="lightbox"]', function(event) {
       const row = document.createElement('div');
       row.classList.add('row');
   
-      for (let i = 0; i < 3; i++) {
+      for (let i = 0; i < 6; i++) { // Change 3 to 5
         const col = document.createElement('div');
-        col.classList.add('col-4');
+        col.classList.add('col-2'); // Adjust column width to fit 5 images
   
         const a = document.createElement('a');
         a.href = images[(index + i) % images.length];
