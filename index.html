@@ -14,7 +14,9 @@
 <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
 <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 
-<!-- Bootstrap -->
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
 <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
 
@@ -29,6 +31,11 @@
   .features-item img {
     width: 300px; /* Set a fixed width */
     height: 400px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
+  }
+  .carousel-item img {
+    width: 100%; /* Set the width to 100% of the container */
+    height: 300px; /* Set a fixed height */
     object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
   }
 </style>
@@ -86,22 +93,69 @@
     <div class="section-title">
       <h2>Discover the Taste of Romania - "Descoperă Gustul României</h2>
     </div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-4">
-        <div class="features-item">
-          <img src="img/specials/1.jpeg" class="img-responsive" alt="Dish 1">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="img/specials/1.jpeg" class="d-block w-100" alt="Dish 1">
+            </div>
+            <div class="col-md-4">
+              <img src="img/specials/2.jpeg" class="d-block w-100" alt="Dish 2">
+            </div>
+            <div class="col-md-4">
+              <img src="img/specials/3.jpeg" class="d-block w-100" alt="Dish 3">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="img/specials/4.jpeg" class="d-block w-100" alt="Dish 4">
+            </div>
+            <div class="col-md-4">
+              <img src="img/specials/5.jpeg" class="d-block w-100" alt="Dish 5">
+            </div>
+            <div class="col-md-4">
+              <img src="img/specials/6.jpeg" class="d-block w-100" alt="Dish 6">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="img/specials/7.jpeg" class="d-block w-100" alt="Dish 7">
+            </div>
+            <div class="col-md-4">
+              <img src="img/specials/8.jpeg" class="d-block w-100" alt="Dish 8">
+            </div>
+            <div class="col-md-4">
+              <img src="img/specials/9.jpeg" class="d-block w-100" alt="Dish 9">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="img/specials/10.jpeg" class="d-block w-100" alt="Dish 10">
+            </div>
+            <div class="col-md-4">
+              <img src="img/specials/1.jpeg" class="d-block w-100" alt="Dish 1">
+            </div>
+            <div class="col-md-4">
+              <img src="img/specials/2.jpeg" class="d-block w-100" alt="Dish 2">
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-xs-12 col-sm-4">
-        <div class="features-item">
-          <img src="img/specials/2.jpeg" class="img-responsive" alt="Dish 2">
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-4">
-        <div class="features-item">
-          <img src="img/specials/3.jpeg" class="img-responsive" alt="Dish 3">
-        </div>
-      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
   </div>
 </div>
@@ -133,19 +187,19 @@
         <div class="menu-section text-center"> <!-- Added text-center class here -->
           <h2 class="menu-section-title">Our Menu</h2>
           <div class="menu-item">
-            <div class="menu-item-name">Tortellini Skewers</div>
+            <div class="menu-item-name">Starter / Aperitiv</div>
             <div class="menu-item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</div>
           </div>
           <div class="menu-item">
-            <div class="menu-item-name">Roast Stuffed Chicken</div>
+            <div class="menu-item-name">Hot Dish / Fel cald</div>
             <div class="menu-item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</div>
           </div>
           <div class="menu-item">
-            <div class="menu-item-name">Sesame-Ginger Beef</div>
+            <div class="menu-item-name">Main Course / Fel principal</div>
             <div class="menu-item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</div>
           </div>
           <div class="menu-item">
-            <div class="menu-item-name">Chocolate Mud Cake</div>
+            <div class="menu-item-name">Daily Menu / Meniul Zilei</div>
             <div class="menu-item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</div>
           </div>
         </div>
@@ -273,6 +327,11 @@
   </div>
 </div>
 
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 <script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
 <script type="text/javascript" src="js/bootstrap.js"></script> 
 <script type="text/javascript" src="js/SmoothScroll.js"></script> 
@@ -281,5 +340,59 @@
 <script type="text/javascript" src="js/main.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script>
+  const images = [
+    'img/specials/1.jpeg',
+    'img/specials/2.jpeg',
+    'img/specials/3.jpeg',
+    'img/specials/4.jpeg',
+    'img/specials/5.jpeg',
+    'img/specials/6.jpeg'
+  ];
+
+  let currentIndex = 0;
+
+  document.querySelector('.carousel-control-next').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateCarousel();
+  });
+
+  document.querySelector('.carousel-control-prev').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateCarousel();
+  });
+
+  function updateCarousel() {
+    const carouselItems = document.querySelectorAll('.carousel-item img');
+    for (let i = 0; i < carouselItems.length; i++) {
+      const imgIndex = (currentIndex + i) % images.length;
+      carouselItems[i].src = images[imgIndex];
+    }
+  }
+</script>
+<script>
+    $(document).ready(function() {
+      $('#carouselExampleControls').on('slide.bs.carousel', function (e) {
+        var $e = $(e.relatedTarget);
+        var idx = $e.index();
+        var itemsPerSlide = 3;
+        var totalItems = $('.carousel-item').length;
+
+        if (idx >= totalItems-(itemsPerSlide-1)) {
+          var it = itemsPerSlide - (totalItems - idx);
+          for (var i=0; i<it; i++) {
+            // append slides to end
+            if (e.direction=="left") {
+              $('.carousel-item').eq(i).appendTo('.carousel-inner');
+            }
+            else {
+              $('.carousel-item').eq(0).appendTo('.carousel-inner');
+            }
+          }
+        }
+      });
+    });
+  </script>
 </body>
 </html>
