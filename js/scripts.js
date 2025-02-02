@@ -63,3 +63,31 @@ $(document).on('click', '[data-toggle="lightbox"]', function(event) {
       updateCarousel();
     });
   });
+  document.addEventListener('DOMContentLoaded', function() {
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const navbarCollapse = document.querySelector('#bs-example-navbar-collapse-1');
+  
+    // Close the navbar when a link is clicked
+    const navLinks = document.querySelectorAll('.nav a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        if (navbarCollapse.classList.contains('in')) {
+          navbarCollapse.classList.remove('in');
+          navbarCollapse.classList.add('collapse');
+        }
+      });
+    });
+  
+  $(document).ready(function () {
+    $('.navbar-nav li a').on('click', function () {
+      $('.navbar-collapse').collapse('hide');
+    });
+
+    $('.navbar-toggle').on('click', function () {
+      if ($('.navbar-collapse').hasClass('in')) {
+        $('.navbar-collapse').collapse('hide');
+      } else {
+        $('.navbar-collapse').collapse('show');
+      }
+    });
+  })});

@@ -1,3 +1,5 @@
+/* General styles */
+
 body, html {
 	font-family: 'Open Sans', serif;
 	text-rendering: optimizeLegibility !important;
@@ -7,6 +9,7 @@ body, html {
 	width: 100% !important;
 	height: 100% !important;
 }
+
 .header-section {
 	position: relative;
 	width: 100%;
@@ -17,6 +20,7 @@ body, html {
 	background: url('../img/intro-bg.jpeg') no-repeat center center/cover; 
   }
   
+
   .intro-background {
   position: absolute;
   top: 0;
@@ -41,23 +45,30 @@ body, html {
 	background-color: black; /* Set the arrow color to black */
 	border-radius: 50%; /* Optional: Make the arrows circular */
   }
-.intro-content {
+  .intro-logo {
 	position: relative;
-	z-index: 1;
+	display: block;
+	margin: 0 auto;
 	text-align: center;
-	margin-bottom: 20px; 
-	transform: translateY(300px) scale(1.3);
+	margin-bottom: 20px;
+	width: 40vw; /* Use viewport width for scaling on larger screens */
+	height: auto; /* Maintain aspect ratio */
   }
-
-.intro-logo {
-  display: block;
-  margin: 0 auto;
-}
-
-.intro-paragraph {
-  margin-top: 10px;
-  color: #fff; 
-}
+  
+  /* Mobile styles */
+  @media (max-width: 767px) {
+	.intro-logo {
+	  width: 75vw; /* Set a fixed width for mobile devices */
+	  height: auto; /* Maintain aspect ratio */
+	}
+  }
+  
+  .intro-paragraph {
+	margin-top: 10px;
+	color: #fff; 
+	font-size: 30px; /* Adjust font size as needed */
+	text-align: center; /* Center align text */
+  }
 h1, h2, h3, h4 {
 	font-family: 'Raleway', sans-serif;
 }
@@ -116,8 +127,6 @@ ul, ol {
 }
 ul, ol {
 	padding: 0;
-	webkit-padding: 0;
-	moz-padding: 0;
 }
 .btn:active, .btn.active {
 	background-image: none;
@@ -403,16 +412,34 @@ header .intro-text {
 	left: 0;
 }
 #team img {
-	max-width: 550px;
-}
-#team .team-img {
+	max-width: 100%; /* Ensure the image takes full width of the container */
+	height: auto; /* Maintain aspect ratio */
+  }
+  
+  #team .team-img {
 	display: inline-block;
 	position: relative;
-}
-.team-img img {
-  max-width: 100%;
-  height: auto;
-}
+	width: 100%; /* Ensure the image takes full width of the container */
+	height: auto; /* Maintain aspect ratio */
+  }
+  
+  .team-img img {
+	max-width: 100%;
+	height: auto;
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 767px) {
+	#team .team-img {
+	  width: 100%; /* Ensure the image takes full width of the container */
+	  height: auto; /* Maintain aspect ratio */
+	}
+  
+	.team-img img {
+	  width: 100vw; /* Use viewport width for dynamic scaling */
+	  height: auto; /* Maintain aspect ratio */
+	}
+  }
 .chef-description {
   font-size: 14px; /* Adjust the font size as needed */
   text-align: left; /* Align text to the left */
