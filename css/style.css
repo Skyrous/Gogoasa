@@ -329,25 +329,27 @@ header .intro-text {
 
 /* About Section */
 #about {
-	padding: 0;
-	background: #f6f6f6;
+    padding: 0;
+    background: #f6f6f6;
 }
 #about h2::after {
-	bottom: 0;
-	margin-left: 0;
-	left: 0;
+    bottom: 0;
+    margin-left: 0;
+    left: 0;
 }
 #about .about-text {
-	padding: 80px 0;
+    padding: 80px 0;
 }
 #about .about-img {
-	background: #444 url(../img/gallery-bg.jpeg) center center no-repeat;
-	background-size: cover;
-	height: 480px;
+    background: #444 url(../img/gallery-bg.jpeg) center center no-repeat;
+    background-size: cover;
+    height: 480px;
 }
 #about p {
-	line-height: 24px;
-	margin: 15px 0 30px;
+    line-height: 24px;
+    margin: 15px 0 30px;
+    font-size: 16px; /* Set font size to 16px */
+    text-align: justify; /* Justify the text */
 }
 /* Our Offers */
 #restaurant-menu {
@@ -382,16 +384,16 @@ header .intro-text {
 }
 
 #restaurant-menu .menu-item {
-    margin: 45px 0;
+    margin: 35px 0;
     font-size: 18px;
     text-align: center;  /* Added this to center all menu items */
 }
 
 #restaurant-menu .menu-item-name {
     font-weight: 400;
-    font-size: 24px;
+    font-size: 18px;
     color: #444;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
