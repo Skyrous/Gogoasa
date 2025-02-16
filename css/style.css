@@ -614,6 +614,16 @@ label {
 	font-family: 'Open Sans', sans-serif;
 	float: left;
 }
+.features-item img {
+    width: 300px; /* Set a fixed width */
+    height: 400px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
+  }
+  .carousel-item img {
+    width: 100%; /* Set the width to 100% of the container */
+    height: 300px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
+  }
 #contact .form-control {
 	display: block;
 	width: 100%;
