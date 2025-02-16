@@ -1,7 +1,7 @@
-import express from 'express';
-import pkg from 'body-parser';
-import cors from 'cors'; // Import the cors middleware
-import { config } from 'dotenv';
+import express from '/node_modules/express';
+import pkg from '/node_modules/body-parser';
+import cors from '/node_modules/cors'; // Import the cors middleware
+import { config } from '/node_modules/dotenv';
 import { MailerSend, EmailParams, Sender, Recipient } from 'mailersend';
 
 config({ path: './api.env' });
@@ -33,9 +33,9 @@ app.post('/contact', async (req, res) => {
     const email_subject = `Dora Catering Contact: ${name}`;
     const email_body = `Ai primit un nou mesaj de contact.\n\nAici sunt detaliile:\n\nNume: ${name}\n\nEmail: ${email}\n\nMesaj:\n${message}`;
 
-    const sentFrom = new Sender('noreply@trial-ynrw7gy7x8jg2k8e.mlsender.net', 'Dora Catering Test');
+    const sentFrom = new Sender('noreply@trial-ynrw7gy7x8jg2k8e.mlsender.net', 'Dora Catering Mailer');
     const recipients = [
-        new Recipient('c_nicoleta00@yahoo.it', 'Admin')
+        new Recipient('cornelse24ro@yahoo.com', 'Tata URS')
     ];
 
     const emailParams = new EmailParams()

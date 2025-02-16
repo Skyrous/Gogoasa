@@ -411,6 +411,18 @@ header .intro-text {
 	margin-left: 0;
 	left: 0;
 }
+#team .section-title {
+	margin-bottom: 40px;
+  }
+  
+  #team .team-img img {
+	max-width: 100%;
+	height: auto;
+  }
+  
+  #team .chef-row {
+	margin-bottom: 40px; /* Add space between rows */
+  }
 #team img {
 	max-width: 100%; /* Ensure the image takes full width of the container */
 	height: auto; /* Maintain aspect ratio */
@@ -458,7 +470,44 @@ header .intro-text {
 #team .col-md-6 {
   padding: 0 15px; /* Adjust padding for better spacing */
 }
-
+/* Slideshow styling */
+.chef-slideshow {
+	position: relative;
+	min-height: 250px;
+  }
+  
+  .chef-info {
+	display: none;
+	transition: opacity 0.5s ease-in-out;
+  }
+  
+  .chef-info.active {
+	display: block;
+  }
+  
+  .chef-img {
+	display: none;
+	max-width: 100%;
+	transition: opacity 0.5s ease-in-out;
+  }
+  
+  .chef-img.active {
+	display: block;
+  }
+  
+  /* Navigation button styling */
+  .prev-btn, .next-btn {
+	background-color: #333;
+	color: white;
+	padding: 8px 12px;
+	border: none;
+	cursor: pointer;
+	margin: 10px 5px;
+  }
+  
+  .prev-btn:hover, .next-btn:hover {
+	background-color: #555;
+  }
 /* Contact Section */
 #contact {
 	padding: 100px 0;
