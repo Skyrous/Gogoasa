@@ -45,15 +45,23 @@ body, html {
 	background-color: black; /* Set the arrow color to black */
 	border-radius: 50%; /* Optional: Make the arrows circular */
   }
-  .intro-logo {
-	position: relative;
-	display: block;
-	margin: 0 auto;
-	text-align: center;
-	margin-bottom: 20px;
-	width: 40vw; /* Use viewport width for scaling on larger screens */
-	height: auto; /* Maintain aspect ratio */
-  }
+  .intro-background {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    text-align: center; /* Align text in the center */
+}
+
+/* Logo styling */
+.intro-logo {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 35vw; /* Use 25% of the viewport width for scaling */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Optional: limit to 300px for large screens */
+}
   
   /* Mobile styles */
   @media (max-width: 767px) {
@@ -343,50 +351,57 @@ header .intro-text {
 }
 /* Our Offers */
 #restaurant-menu {
-	padding: 100px 0 60px 0;
+    padding: 100px 0 60px 0;
 }
+
 #restaurant-menu img {
-	width: 300px;
-	box-shadow: 15px 0 #a7c44c;
+    width: 300px;
+    box-shadow: 15px 0 #a7c44c;
 }
+
 #restaurant-menu h3 {
-	padding: 10px 0;
-	text-transform: uppercase;
+    padding: 10px 0;
+    text-transform: uppercase;
 }
+
 #restaurant-menu .menu-section hr {
-	margin: 0 auto;
+    margin: 0 auto;
 }
+
 #restaurant-menu .menu-section {
-	margin: 0 20px 80px;
+    margin: 0 20px 80px;
 }
+
 #restaurant-menu .menu-section-title {
-	font-size: 32px;
-	display: block;
-	font-weight: 400;
-	color: #444;
-	margin: 20px 0;
-	text-align: center;
+    font-size: 34px;
+    display: block;
+    font-weight: 400;
+    color: #444;
+    margin: 20px 0;
+    text-align: center;
 }
+
 #restaurant-menu .menu-item {
-	margin: 45px 0;
-	font-size: 18px;
+    margin: 45px 0;
+    font-size: 18px;
+    text-align: center;  /* Added this to center all menu items */
 }
+
 #restaurant-menu .menu-item-name {
-	font-weight: 400;
-	font-size: 20px;
-	color: #444;
-	margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 24px;
+    color: #444;
+    margin-bottom: 20px;
+    text-align: center;
 }
+
 #restaurant-menu .menu-item-description {
-	font-size: 15px;
-	width: 85%;
+    font-size: 17px;
+    text-align: center; /* Ensure description is centered */
+    margin-top: 10px;
+    width: 100%; /* Set the width to 100% to allow centering */
 }
-#restaurant-menu .menu-item-price {
-	float: right;
-	font-weight: 400;
-	color: #555;
-	margin-top: -36px;
-}
+
 /* Gallery Section */
 #gallery {
 	padding: 0;
@@ -404,42 +419,87 @@ header .intro-text {
 }
 /* Team Section */
 #team {
-	padding: 120px 0;
+    padding: 120px 0;
 }
+
 #team h2::after {
-	bottom: 0;
-	margin-left: 0;
-	left: 0;
+    bottom: 0;
+    margin-left: 0;
+    left: 0;
 }
+
 #team .section-title {
-	margin-bottom: 40px;
-  }
-  
-  #team .team-img img {
-	max-width: 100%;
-	height: auto;
-  }
-  
-  #team .chef-row {
-	margin-bottom: 40px; /* Add space between rows */
-  }
-#team img {
-	max-width: 100%; /* Ensure the image takes full width of the container */
-	height: auto; /* Maintain aspect ratio */
-  }
-  
-  #team .team-img {
-	display: inline-block;
-	position: relative;
-	width: 100%; /* Ensure the image takes full width of the container */
-	height: auto; /* Maintain aspect ratio */
-  }
-  
-  .team-img img {
-	max-width: 100%;
-	height: auto;
-  }
-  
+    margin-bottom: 50px;
+}
+
+#team .chef-row {
+    margin-bottom: 40px; /* Add space between rows */
+    display: flex; /* Enable Flexbox */
+    align-items: center; /* Vertically align items */
+    justify-content: space-between; /* Space out the items */
+}
+
+#team .team-img img {
+    max-width: 100%;
+    height: auto;
+    width: 450px; /* Set a fixed width */
+    height: 500px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+#team .chef-row .col-md-6 {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center if necessary */
+}
+
+#team .col-md-10 {
+    font-size: 15.5px; /* Adjust the text size */
+    text-align: justify; /* Justify the text */
+    line-height: 1.6; /* Better line spacing */
+}
+
+#team p {
+    font-size: 15.5px;
+    text-align: justify; /* Justify the text */
+    line-height: 1.6; /* Add line height for better readability */
+    color: #444; /* Make the text grey like the rest */
+}
+
+#team h3 {
+    font-size: 18px; /* Set a larger font size for headings */
+    font-weight: bold; /* Make the heading bold */
+    color: #444; /* Keep the grey color for consistency */
+    text-transform: uppercase; /* Capitalize the heading text */
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+#team ul {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0; /* Remove default padding */
+	line-height: 1; /* Better line spacing */
+}
+
+#team li {
+    font-size: 15.5px; /* Keep font size consistent with the rest of the text */
+    line-height: 1.6; /* Maintain consistent line height */
+    margin-bottom: 10px; /* Space out list items */
+	line-height: 1.6; /* Better line spacing */
+}
+
+#team .team-img {
+    display: inline-block;
+    position: relative;
+    width: 100%; /* Ensure the image takes full width of the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.team-img img {
+    max-width: 100%;
+    height: auto;
+}
+
   /* Mobile styles */
   @media (max-width: 767px) {
 	#team .team-img {
