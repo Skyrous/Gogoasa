@@ -122,6 +122,15 @@ p.intro {
 	margin: 12px 0 0;
 	line-height: 24px;
 }
+
+.section-title p {
+    font-size: 18px; /* Adjust size to match the menu text */
+    font-weight: 400; /* Make it match the menu list weight */
+    color: #555; /* Adjust color if needed */
+    margin-top: 10px; /* Add space after the heading */
+    margin-bottom: 20px; /* Add space before the menu list */
+    text-align: center; /* Keep it centered */
+}
 a {
 	color: #8eb640;
 }
